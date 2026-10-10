@@ -14,6 +14,8 @@ const allowedOrigins = [
   "https://localhost",
 ];
 
+app.set("trust proxy", 1); 
+
 const app = express();
 app.disable('x-powered-by');
 app.use(helmet());
