@@ -14,9 +14,9 @@ const allowedOrigins = [
   "https://localhost",
 ];
 
+const app = express();
 app.set("trust proxy", 1); 
 
-const app = express();
 app.disable('x-powered-by');
 app.use(helmet());
 app.use(cors({ origin: allowedOrigins, methods: ['GET', 'POST', 'PATCH', 'OPTIONS'], allowedHeaders: ['Content-Type', 'Authorization'] }));
